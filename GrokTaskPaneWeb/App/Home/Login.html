@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=270, initial-scale=1.0">
+    <title></title>
+    <script src="../../Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="../../Scripts/grok-all.debug.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui-1.10.3/ui/minified/jquery-ui.min.js"></script>
+
+    <link href="../../Content/Office.css" rel="stylesheet" type="text/css" />
+    <link href="../../Scripts/jquery-ui-1.10.3/themes/officeapp-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="https://appsforoffice.microsoft.com/lib/1.0/hosted/office.js" type="text/javascript"></script>
+
+    <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
+    <!--    <script src="../../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>       -->
+    <!--    <script src="../../Scripts/Office/1.0/office.js" type="text/javascript"></script>          -->
+
+    <link href="../App.css" rel="stylesheet" type="text/css" />
+    <script src="../App.js" type="text/javascript"></script>
+    <script src="../Streams/Streams.js" type="text/javascript"></script>
+
+    <script src="Login.js" type="text/javascript"></script>
+    <style>
+        #progressbar .ui-progressbar-value {
+            background-color: #ccc;
+        }
+        #login {
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page content -->
+    <div id="content-header">
+    </div>
+    <div id="content-main">
+        <div class="padding">
+            <h2>What Is Grok?</h2>
+            <p>Grok software finds complex patterns in data streams and generates actionable predictions in real time.</p>
+
+            <h2>How Grok Works</h2>
+            <p>Feed Grok data, and it returns predictions that generate action. Grok learns and adapts automatically.</p>
+
+            <h2>Sign In To Your Account</h2>
+            <p><strong>Visit <a href="http://groksolutions.com" target="_blank">groksolutions.com</a> to obtain an account.
+                Then, enter your API key below.
+               </strong></p>
+            
+            <form id="login">
+                <div>
+                    <span>API key:</span>
+                </div>
+                <input id="login-apikey" type="text" value="" /><br />
+                <!--<input id="login-remember" type="checkbox" checked="checked" /><label for="login-remember">Keep me signed in.</label><br />-->
+                <div style="clear:both; float:right">
+                    <input id="login-submit" type="submit" value="Sign in" />
+                </div>
+
+            </form>
+
+            <div id="progress-panel" style="display:none">
+                <div id="progressbar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirm-dialog" />
+</body>
+</html>

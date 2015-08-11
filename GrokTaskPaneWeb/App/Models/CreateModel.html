@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=270, initial-scale=1.0">
+    <title></title>
+    <script src="../../Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="../../Scripts/grok-all.debug.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui-1.10.3/ui/minified/jquery-ui.min.js"></script>
+    
+    <link href="../../Content/Office.css" rel="stylesheet" type="text/css" />
+    <link href="../../Scripts/jquery-ui-1.10.3/themes/officeapp-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="https://appsforoffice.microsoft.com/lib/1.0/hosted/office.js" type="text/javascript"></script>
+
+    <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
+    <!--    <script src="../../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>       -->
+    <!--    <script src="../../Scripts/Office/1.0/office.js" type="text/javascript"></script>          -->
+
+    <link href="../App.css" rel="stylesheet" type="text/css" />
+    <script src="../App.js" type="text/javascript"></script>
+    <script src="Models.js" type="text/javascript"></script>
+    <script src="CreateModel.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Page content -->
+    <div id="content-header">
+    </div>
+    <div id="content-main">
+        <div class="padding">
+            <p><strong>Create a model based on a stream of data in a Grok project.</strong></p>
+            
+            <p>
+                <div>Stream: <span id="model-stream-name">stream name goes here</span></div>
+            </p>
+            
+            <form id="stream-create">
+                <div>
+                    <span>Supply a name for your model.</span><br />
+                    <input id="model-create-name" type="text" />
+                </div>
+                <div>
+                    <span>What information should the model predict?</span><br />
+                    <select id="model-create-predictedField"></select>
+                </div>
+                
+                <hr />
+                <div style="clear:both; float:right">
+                    <input id="model-create-submit" type="submit" value="Create" />
+                    <input id="model-create-cancel" type="button" value="Cancel" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
